@@ -26,4 +26,4 @@ let ilosc = products.lenght;
     sum = sum + product.price;
 });
 console.log("Suma: " + sum);
-console.log("ilosc: " + ilosc);
+console.log("srednia: " + sum/products.length);
