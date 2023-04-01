@@ -19,7 +19,6 @@ const products = [
 
 let sum = 0
 
-let ilosc = products.lenght;
 
 	
 	products.forEach(function(product) {
@@ -27,3 +26,4 @@ let ilosc = products.lenght;
 });
 console.log("Suma: " + sum);
 console.log("srednia: " + sum/products.length);
+console.log("ilosc: " + products.length);
