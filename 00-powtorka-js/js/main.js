@@ -30,7 +30,6 @@ for (let i = 0;i<people.length;i++){
     if (people[i].age > wiek){
         wiek = people[i].age
         imie = people[i].name
-
     }
 }
 
