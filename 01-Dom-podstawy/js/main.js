@@ -37,7 +37,7 @@ const form2 = document.querySelector('#form')
 const wyslij = () => {
     console.log('wyslany');
     event.preventDefault()
-    list.innerHTML += '<li><strong>AAAAAA</strong></li>'
+    list.innerHTML += '<li><strong>'+input[0].value+'</strong><p>'+input[1].value+'</p></li>'
 
     // ostatnie cwiczenie
 }
