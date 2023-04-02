@@ -79,4 +79,6 @@ let suma2 = 0
   function sumproducts (x){
     x.forEach(y => {suma2 = suma2 + y.price})
   }
+
+  sumproducts(products)
   console.log("Suma wszystkich produktow: "+ suma2)
