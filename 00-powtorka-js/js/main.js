@@ -78,7 +78,8 @@ let suma = 0
         if(product.category == 'fruits')
         {
             suma = suma +product.price
-        }})
+        }
+    })
 
   console.log("cena owcow:" + suma)
 let suma2 = 0
