@@ -52,7 +52,8 @@ const shoe50 = {brand:"nike",color:"white",size:40}
 if (shoe50.size >42){
     console.log("to duży but")
 }
-else {console.log("male stopy")}
+else 
+{console.log("male stopy")}
 
 const products = [
     {
@@ -72,13 +73,24 @@ const products = [
     }
   ]
 let suma = 0
-  products.forEach(product => {if(product.category == 'fruits'){suma = suma +product.price}})
+  products.forEach(product => 
+    {
+        if(product.category == 'fruits')
+        {
+            suma = suma +product.price
+        }})
 
-  console.log("cena poroduktow:" + suma)
+  console.log("cena owcow:" + suma)
 let suma2 = 0
-  function sumproducts (x){
+  function sumproducts (x)
+  {
     x.forEach(y => {suma2 = suma2 + y.price})
   }
 
   sumproducts(products)
   console.log("Suma wszystkich produktow: "+ suma2)
+suma2 = 0
+  const result = products.filter(product => product.category == 'fruits')
+  sumproducts(result)
+
+  console.log("Suma filtrowanych  produktow: "+ suma2)
