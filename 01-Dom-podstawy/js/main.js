@@ -27,8 +27,9 @@ console.log(button.innerText)
 const form = document.querySelector('form')
 form.id = 'my-form'
 const input = document.querySelectorAll('input')
-input[0].value = 'jakiś tekst'
-input[1].value = 'jakiś inny tekst'
+console.log(input)
+input[0].value = 'default 1'
+input[1].value = 'default 2'
 const list = document.querySelector('#id1')
 
 messages.forEach(item => {list.innerHTML += '<li><strong>'+item.author+'</strong> napisala<p>'+item.message+'</p></li>'})
