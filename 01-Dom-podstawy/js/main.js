@@ -32,3 +32,14 @@ input[1].value = 'jakiś inny tekst'
 const list = document.querySelector('#id1')
 
 messages.forEach(item => {list.innerHTML += '<li><strong>'+item.author+'</strong> napisala<p>'+item.message+'</p></li>'})
+
+const form2 = document.querySelector('#form')
+const wyslij = () => {
+    console.log('wyslany');
+    event.preventDefault()
+    list.innerHTML += '<li><strong>AAAAAA</strong></li>'
+}
+const kasuj = () =>{list.innerHTML=''}
+document.addEventListener('submit',wyslij)
+const button2 = document.querySelector('#usun')
+button2.addEventListener('click',kasuj)
