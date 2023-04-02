@@ -38,6 +38,8 @@ const wyslij = () => {
     console.log('wyslany');
     event.preventDefault()
     list.innerHTML += '<li><strong>AAAAAA</strong></li>'
+
+    // ostatnie cwiczenie
 }
 const kasuj = () =>{list.innerHTML=''}
 document.addEventListener('submit',wyslij)
