@@ -63,6 +63,3 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
-
-input:valid{background-color: #45a049;}
-input:invalid{background-color: #e22f0f;}
