@@ -52,15 +52,23 @@ const renderOrders = () => {
 }
 
 const handleSubmit = (event) => {
+    let blad = 0
   event.preventDefault();
-
-  const newOrder = {
+  let newOrder = {
     id: parseInt(orderId.value),
     name: orderName.value,
     price: parseFloat(orderPrice.value)
   }
 
-  orders.push(newOrder);
+  orders.forEach(order =>{
+
+    if(order.id == newOrder.id){
+        blad = 1
+    }
+
+  })
+
+  if (blad == 0) {orders.push(newOrder)}else{alert("złe id")}
 
   renderOrders();
 
@@ -78,18 +86,22 @@ const calculate = () =>{
     let suma = 0 
     let srednia = 0
     let cnt =0
+
     orders.forEach(order => {
         suma += order.price
         cnt +=1
         
-
     })
-    sumawynik.innerHTML= suma.toFixed(2)
-    sredniawynik.innerHTML = (suma/cnt).toFixed(2)
-    console.log(suma)
+    srednia = (suma/cnt).toFixed(2)
+    sumawynik.innerHTML= suma.toFixed(2)+"zł"
+    sredniawynik.innerHTML = `${srednia}zł`
+    if (isNaN(srednia)) {sredniawynik.innerHTML = '0.00zł'}
+    
 }
 
 renderOrders();
 orderForm.addEventListener("submit", handleSubmit);
 removeOrdersButton.addEventListener('click', removeOrders);
 calculatebutton.addEventListener('click', calculate);
+
+localStorage.setItem('orders',JSON.stringify(orders))
